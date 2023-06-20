@@ -1,9 +1,10 @@
 <section class="LogoList">
     <div class="page-width">
+    <h2>Section title</h2>
         <div class="row">
         {%- for block in section.blocks -%}
             <div class="col">
-                <img src="{{ block.settings.image }}" alt="{{ block.settings.image.alt }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}">
             </div>
         {%- endfor -%}
         </div>
