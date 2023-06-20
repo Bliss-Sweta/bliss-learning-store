@@ -1,0 +1,40 @@
+<section class="LogoList">
+    <div class="page-width">
+        <div class="row">
+        {%- for block in section.blocks -%}
+            <div class="col">
+                <img src="{{ block.settings.image }}" alt="{{ block.settings.image.alt }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}">
+            </div>
+        {%- endfor -%}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.multicolumn.name",
+  "class": "section",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Logo list",
+      "category": "Image",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
