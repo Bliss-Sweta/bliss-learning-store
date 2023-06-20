@@ -8,7 +8,9 @@
             </div>
         {%- endfor -%}
         </div>
-        test
+        <div class="subtext">
+            {{ section.settings.subtext }}
+        </div>
     </div>
 </section>
 
@@ -17,6 +19,11 @@
   "name": "t:sections.multicolumn.name",
   "class": "section",
   "settings": [
+    {
+        "type": "richtext",
+        "id": "subtext",
+        "label": "Description"
+    }
   ],
   "blocks": [
     {
